@@ -1,0 +1,35 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald'
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+/* body{
+    background: rgb(161,164,147);
+    background: linear-gradient(90deg, rgba(161,164,147,1) 0%, rgba(146,174,145,1) 35%, rgba(145,164,169,1) 100%, rgba(0,255,158,1) 100%);
+} */
+
+.w3-bg-black-bis{
+    background-color: hsl(0, 0%, 7%);
+}
+
+.w3-bg-black-ter{
+    background-color: hsl(0, 0%, 14%);
+}
+
+.w3-c-black-ter{
+    color: hsl(0, 0%, 14%);
+}
+
+/* logo */
+img#codemusLogo{
+    width: 1em;
+    height: 1em;
+}
+
+img{
+    width: 150px;
+    height: 112.5px;
+}

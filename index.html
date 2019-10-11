@@ -7,9 +7,249 @@
     <title>Waterflo Engineering</title>
     <link type='text/css' rel='stylesheet' href='./w3.css' />
     <link type='text/css' rel='stylesheet' href='./styles.css' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald'>
+    <!-- <link rel='stylesheet' href='https://google-api-oswald.css'> -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open Sans'>
+    <!-- <link rel='stylesheet' href='./google-api-sans.css'> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <!-- <link rel='stylesheet' href='./font-awesome.min.css'> -->
 </head>
 <body>
-<script src='./app.js'></script>
-<noscript>Your browser does not support Javascript.</noscript>    
+    <!-- Navigation bar with social media icons -->
+    <div class='w3-bar w3-bg-black-ter w3-text-lime w3-hide-small'>
+        <a href='https://www.facebook.com/Waterfloengineering' target='_blank' class='w3-bar-item w3-button'>
+            <i class='fa fa-facebook-official'></i>
+        </a>
+        <a href='#' class='w3-bar-item w3-button'>
+            <i class='fa fa-instagram'></i>
+        </a>
+        <a href='#' class='w3-bar-item w3-button'>
+            <i class='fa fa-snapchat'></i>
+        </a>
+        <a href='#' class='w3-bar-item w3-button'>
+            <i class='fa fa-twitter'></i>
+        </a>
+        <a href='#' class='w3-bar-item w3-button'>
+            <i class='fa fa-linkedin'></i>
+        </a>
+        <a href='#' class='w3-bar-item w3-button w3-right'>
+            <i class='fa fa-search'></i>
+        </a>
+    </div>
+        <!-- w3-content defines a container for fixed size centered content, 
+        and is wrapped around the whole page content, except for the footer -->
+    <div class='w3-content' style='max-width:1600px'>
+        <!-- Header -->
+        <header class='w3-container w3-center w3-padding-48 w3-bg-black-ter'>
+            <h1 class='w3-xxxlarge w3-text-lime'><b>WATERFLO ENGINEERING</b></h1>
+            <h6 class='w3-text-light-grey'>Welcome to <span class='w3-tag w3-lime'> WaterFlo Engineering</span></h6>
+        </header>
+        <!-- Grid -->
+        <div class='w3-row w3-padding w3-border'>
+            <!-- A little word about the company-->
+            <div class='w3-col l8 s12'> 
+                <div class='w3-container w3-white w3-margin w3-padding-large'>
+                    <div class='w3-center'>
+                        <h3 class='w3-text-lime'>A little word about Us</h3>
+                    </div>
+                    <div class='w3-justify'>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, eos mollitia odio doloremque 
+                            numquam hic sapiente illum iure maxime delectus neque ex quidem necessitatibus alias consequuntur 
+                            fuga, cumque officiis laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore illum, 
+                            eum quis at saepe quibusdam in doloremque? Repellendus blanditiis ipsa dicta. Ea voluptas quibusdam 
+                            nemo ducimus qui fuga ullam quasi.
+                        </p>
+                        <p class='w3-right'>
+                            <b><i class='fa fa-toggle-down w3-text-lime'></i></b>
+                        </p>
+                        <p class='w3-clear'></p>
+                    </div>
+                </div>
+                <!-- A little word about the products-->
+                <div class='w3-container w3-white w3-margin w3-padding-large'>
+                    <div class='w3-center w3-opacity'>
+                        <h3 class='w3-text-lime'>About our products</h3>
+                    </div>
+                    <div class='w3-justify'>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, eos mollitia odio doloremque 
+                            numquam hic sapiente illum iure maxime delectus neque ex quidem necessitatibus alias consequuntur 
+                            fuga, cumque officiis laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore illum, 
+                            eum quis at saepe quibusdam in doloremque? Repellendus blanditiis ipsa dicta. Ea voluptas quibusdam 
+                            nemo ducimus qui fuga ullam quasi.
+                        </p>
+                        <p class='w3-right'>
+                            <b><i class='fa fa-toggle-down w3-text-lime'></i></b>
+                        </p>
+                        <p class='w3-clear'></p>
+                    </div>
+                </div>
+                <!-- Enter the A-team -->
+                <div class='w3-container w3-white w3-margin w3-padding-large'>
+                    <div class='w3-center w3-opacity'>
+                        <h3 class='w3-c-black-ter w3-text-lime'>Meet the team</h3>
+                    </div>
+                    <div class='w3-justify'>
+                        <img src='./pics/engineers.jpg' alt='the team' style='width:100%; height: 75%' class='w3-padding-16'>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, eos mollitia odio doloremque 
+                            numquam hic sapiente illum iure maxime delectus neque ex quidem necessitatibus alias consequuntur 
+                            fuga, cumque officiis laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore illum, 
+                            eum quis at saepe quibusdam in doloremque? Repellendus blanditiis ipsa dicta. Ea voluptas quibusdam 
+                            nemo ducimus qui fuga ullam quasi.
+                        </p>
+                        <p class='w3-right'>
+                            <button class='w3-btn'>
+                            <b><i class='fa fa-toggle-up w3-text-lime w3-xlarge'></i></b>
+                            </button>
+                        </p>
+                        <p class='w3-clear'></p>
+                    </div>
+                </div>
+                <!-- <div id='contact us' class='w3-rest'>
+                    <div id="gmap">
+                            <div class="gmap_canvas w3-greyscale-min">
+                                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=basildon&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no"></iframe>
+                            </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- Preview products?-->
+            <div class='w3-col l4'>
+            <div class='w3-white w3-margin'>
+                <!-- insert grey scale preview products here -->
+                <div id='ourProductsSlideShow' class='w3-container w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>Our products</h4>
+                    <canvas id='myCanvas' class='w3-card w3-section w3-light-grey' style='display: block;
+                    margin: auto;'></canvas>
+                    <!-- <p class='w3-text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Aspernatur, eos mollitia odio doloremque numquam hic sapiente illum iure 
+                        maxime delectus neque ex quidem necessitatibus alias consequuntur fuga, cumque officiis laboriosam.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore illum, eum quis at saepe quibusdam 
+                        in doloremque? Repellendus blanditiis ipsa dicta. Ea voluptas quibusdam nemo ducimus qui fuga ullam quasi.
+                    </p> -->
+                </div>
+            </div>
+            <!-- Popular items-->
+            <div class='w3-white w3-margin'>
+                <div class='w3-container w3-padding w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>Popular Items</h4>
+                </div>
+                <ul class='w3-ul w3-hoverable w3-white'>
+                    <li class='w3-padding-16 w3-section'>
+                        <img src='./pics/pipe.jpg' alt='pipes' class='w3-left w3-margin-right'>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo repellat blanditiis doloribus unde, eveniet 
+                            veritatis aut saepe eius iusto laborum animi quidem pariatur soluta quia maxime, a qui eaque dolores.</span>
+                    </li>
+                    <li class='w3-padding-16 w3-section'>
+                        <img src='./pics/valve.jpg' alt='valves' class='w3-left w3-margin-right'>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quia in magni. Sint error nihil, iste saepe nostrum 
+                            temporibus labore atque non voluptate cumque recusandae eveniet, repellat laudantium aperiam sunt.</span>
+                    </li>
+                    <li class='w3-padding-16 w3-section'>
+                        <img src='./pics/engineers.jpg' alt='Image' class='w3-left w3-margin-right'>
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, dignissimos eos at aspernatur enim ea magnam. 
+                        Quae accusamus sunt ea, tempora eveniet delectus magnam numquam cupiditate ipsum, ipsa adipisci pariatur.</span>
+                    </li>
+                    <li class='w3-padding-16 w3-section'>
+                        <img src='./pics/tank.jpg' alt='tanks' class='w3-left w3-margin-right w3-sepia'>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit enim asperiores hic nihil nam exercitationem praesentium 
+                            commodi facilis consequatur, aperiam facere expedita quos laborum sint sit cupiditate velit eaque beatae!</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- News -->
+            <div class='w3-white w3-margin'>
+                <div class='w3-container w3-padding w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>News</h4>
+                </div>
+                <div class='w3-container w3-white'>
+                    <div class='w3-container w3-display-container w3-light-grey w3-section' style='height:200px'>
+                        <span class='w3-display-middle'>Update here</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Tags -->
+            <div class='w3-white w3-margin'>
+                <div class='w3-container w3-padding w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>Tags</h4>
+                </div>
+                <div class='w3-container w3-white'>
+                    <p>
+                    <span class='w3-tag w3-bg-black-ter w3-margin-bottom'>pipes</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>valves</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>tanks</span>
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>horses</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>solar panels</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>damns</span>
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>sprinklers</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>pumps</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>valves</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>tanks</span>
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>horses</span> 
+                    <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>solar panels</span> 
+                    </p>
+                </div>
+            </div>
+            <!-- The team -->
+            <div class='w3-white w3-margin'>
+                <div class='w3-container w3-padding w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>The Team</h4>
+                </div>
+            </div>
+            <div class='w3-white w3-margin'>
+                <div class='w3-container w3-padding w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>Follow Us</h4>
+                </div>
+                <div class='w3-container w3-xlarge w3-padding w3-text-lime w3-justify w3-center'>
+                    <i class='fa fa-facebook-official w3-hover-opacity'></i>
+                    <i class='fa fa-instagram w3-hover-opacity'></i>
+                    <i class='fa fa-snapchat w3-hover-opacity'></i>
+                    <i class='fa fa-pinterest-p w3-hover-opacity'></i>
+                    <i class='fa fa-twitter w3-hover-opacity'></i>
+                    <i class='fa fa-linkedin w3-hover-opacity'></i>
+                </div>
+            </div>
+            <!-- Subscribe -->
+            <div class='w3-white w3-margin'>
+                <div class='w3-container w3-padding w3-bg-black-ter'>
+                    <h4 class='w3-text-lime'>Subscribe</h4>
+                </div>
+                <div class='w3-container'>
+                    <p>Subscribe for regular updates on our products & services !</p>
+                    <p><input class='w3-input w3-border' type='text' placeholder='Enter e-mail' style='width:100%'></p>
+                    <p><button type='button' class='w3-button w3-block w3-lime'>Subscribe</button></p>
+                </div>
+            </div>
+            <!-- END About/Intro Menu -->
+        </div>
+        <!-- END GRID -->
+    </div>
+    <!-- END w3-content -->
+    </div>
+    <!-- Subscribe Modal -->
+    <div id='subscribe' class='w3-modal w3-animate-opacity'>
+        <div class='w3-modal-content' style='padding:32px'>
+            <div class='w3-container w3-white'>
+                <i class='fa fa-remove w3-transparent w3-button w3-xlarge w3-right'></i>
+                <h2 class='w3-wide'>SUBSCRIBE</h2>
+                <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+                <p><input class='w3-input w3-border' type='text' placeholder='Enter e-mail'></p>
+                <button type='button' class='w3-button w3-block w3-padding-large w3-red w3-margin-bottom' >Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class='w3-container w3-bg-black-ter' style='padding:32px'>
+        <a href='#' class='w3-button w3-padding-large w3-margin-bottom w3-bg-black-ter w3-text-lime w3-hover-dark-grey'><i class='fa fa-toggle-up w3-margin-right'></i></a>
+        <p class='w3-right'>
+            <span class='w3-text-dark-grey'>By</span>
+            <a href='http://www.codemusltd.com' target='_blank'>
+                <img id='codemusLogo' class='img-thumbnail w3-sepia' src='./pics/logo.png' alt='codemus logo'>
+            </a>
+        </p>
+    </footer>
+    <script src='./glSlideShow.js'></script>
+    <script src='./app.js'></script>
+    <!-- <script src='./test.js'></script> -->
+    <noscript>Your browser does not support Javascript.</noscript>    
 </body>
 </html>
