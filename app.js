@@ -1,7 +1,9 @@
 'use strict';
 
+let surfaceIrrigationConstructionPics = require('./surfaceIrrigationConstructionPics');
+
 const slideshow = new GLSlideshow(
-	[ './pics/chilling.jpg', './pics/engineers.jpg', './pics/pipe.jpg', './pics/tank.jpg', './pics/valve.jpg' ],
+	[ ...surfaceIrrigationConstructionPics ],
 	{
 		canvas: document.getElementById('myCanvas'), // optional
 		width: 300,      // optional
