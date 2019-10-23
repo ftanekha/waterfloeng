@@ -23,6 +23,10 @@ body {
     color: hsl(0, 0%, 14%);
 }
 
+.w3-tag:hover{
+    color: black !important;
+    background-color: lightgrey !important;
+}
 /* logo */
 img#codemusLogo{
     width: 1em;
