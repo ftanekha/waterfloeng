@@ -1,17 +1,20 @@
 'use strict';
 
-let surfaceIrrigationConstructionPics = require('./surfaceIrrigationConstructionPics');
+let projectList = require('./projectList');
+let projectSlideShow = require('./projectSlideShow');
 
-const slideshow = new GLSlideshow(
-	[ ...surfaceIrrigationConstructionPics ],
-	{
-		canvas: document.getElementById('myCanvas'), // optional
-		width: 300,      // optional
-		height: 225,        // optional
-		duration: 1000,     // optional
-		interval: 5000,     // optional
-		effect: 'wind' // optional [wind, ripple: work] [crossFade, pageCurls, cube, directionalWipe: don't work]
-	}
-);
+//display project menu
+function displayProjectMenu(){
+    //hide heading
+    document.getElementById('ourProjectsHeading').style.display = 'none';
 
-document.getElementById( 'ourProductsSlideShow' ).appendChild( slideshow.domElement );
+    // display menu
+    projectList();
+
+    //render slideShow onlick for each project
+    projectSlideShow();
+	
+} 
+
+let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
+ourProductsSlideShow.addEventListener('click', displayProjectMenu);

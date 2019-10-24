@@ -9,6 +9,19 @@ body {
 h3{
     text-shadow: coral 0.15px 0.15px;
 }
+
+/* div#ourProductsSlideShow{
+    height: 175px;
+} */
+
+/* h4#ourProjectsHeading{
+    margin-top: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+} */
+/* div#ourProductsSlideShow{
+    outline: groove white 30px 30px;
+} */
 /* body{
     background: rgb(161,164,147);
     background: linear-gradient(90deg, rgba(161,164,147,1) 0%, rgba(146,174,145,1) 35%, rgba(145,164,169,1) 100%, rgba(0,255,158,1) 100%);

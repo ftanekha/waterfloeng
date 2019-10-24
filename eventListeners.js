@@ -1,15 +1,22 @@
 'use strict';
 
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+// let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let projectList = require('./projectList');
 
-let ourProductsSlideShowDiv = document.getElementById('ourProductsSlideShow');
+let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 
-ourProductsSlideShowDiv.addEventListener('click', function(){
+//display project menu
+function displayProjectMenu(){
     //hide heading
-    document.getElementById('ourProjectsHeading').setAttribute('style', 'display: none');
+    document.getElementById('ourProjectsHeading').style.display = 'none';
 
-    // append slideshow
-    appendElement('ourProductsSlideShowDiv', 
-            ['canvas', 'myCanvas', ' w3-card w3-section w3-light-grey', [ ['style', 'display: block'], ['style', 'margin: auto'] ] ]
-    )
-});
+    //append projectList
+    projectList();
+} 
+
+ourProductsSlideShow.addEventListener('click', displayProjectMenu);
+
+// append slideshow
+// appendElement('ourProductsSlideShow', 
+// ['canvas', 'myCanvas', ' w3-card w3-section w3-light-grey', [ ['style', 'display: block'], ['style', 'margin: auto'] ] ]
+// )

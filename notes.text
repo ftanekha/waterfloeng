@@ -1,3 +1,10 @@
+-need to remove function causing additional space when projects are clicked
+- need to stop canvas from displaying onload, should only show when one of the 
+projects has been clicked
+- need to create looping function for popular products such that whenuser clicks on 'tag',
+the screen moves up to the first product image.
+the image matches the clicked tag and has a highlighting background (maybe light-grey)
+
 -need to add logo
 - work on projects section - slideshow, ref: eventListeners.js
 - revisite site design-laumch by friday
