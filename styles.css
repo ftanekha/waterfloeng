@@ -10,6 +10,10 @@ h3{
     text-shadow: coral 0.15px 0.15px;
 }
 
+.w3-border-double-black-ter{
+    border-style: double;
+    background: hsl(0, 0%, 14%);
+}
 /* div#ourProductsSlideShow{
     height: 175px;
 } */
@@ -51,13 +55,20 @@ h3{
     background-color: lightgrey !important;
 }
 /* logo */
+img#waterfloLogo{
+    float: none;
+}
+
 img#codemusLogo{
     width: 1em;
     height: 1em;
-    box-shadow: lightcoral 2px 2px;
+    box-shadow: lightgrey 2px 2px;
+    float: none;
 }
 
 img{
-    width: 150px;
-    height: 112.5px;
+    width: 100px;
+    height: 75px;
+    float: left;
+    clear: both;
 }

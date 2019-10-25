@@ -65,15 +65,67 @@ module.exports = appendElement;
 },{}],2:[function(require,module,exports){
 'use strict';
 
+let popularProducts = require('./popularProducts');
+// let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+
+function addPopularProducts(){
+    for(let product of popularProducts){
+        let listItem = document.createElement('li');
+        listItem.className += ' w3-padding-16 w3-section';
+
+        let listItemImageContainer = document.createElement('div');
+        listItemImageContainer.style.clear = 'both';
+        listItemImageContainer.className += ' w3-section';
+
+        let listItemImage = document.createElement('img');
+        listItemImage.src = product.src; 
+        listItemImage.alt = product.alt;
+        listItemImage.title = product.alt; 
+        listItemImage.className += ' w3-left w3-margin-right w3-margin-bottom';
+
+        let listItemLabel = document.createElement('span');
+        listItemLabel.className += 'w3-justify';
+        listItemLabel.innerText = product.label;
+
+        listItemImageContainer.append(listItemImage);
+        listItemImageContainer.append(listItemLabel);
+
+        listItem.append(listItemImageContainer);
+        
+        document.getElementById('popularItems').append(listItem);
+    }
+}
+
+module.exports = addPopularProducts;
+},{"./popularProducts":6}],3:[function(require,module,exports){
+'use strict';
+
 let GLSlideshow = require('./glSlideShow');
+
+let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 
 //requires an array of photos as an argument
 function addSlideShow(projectId){
-    //switch from menu list
-    document.getElementById('ourProjectsHeading').style.display = 'none';
 
-    //display canvas(initially set to 'none')
-    document.getElementById('myCanvas').style.display = 'block';
+	//removeProject click eventListener - stop generation of more slideshows ???
+	document.getElementsByClassName( 'w3-project' ).removeEventListener('click', addSlideShow); 
+
+    //switch from menu list? may not be necessary
+	document.getElementById('ourProjectsHeading').style.display = 'none';
+	
+	//switch off menu items
+	document.getElementsByClassName('w3-project').style.display = 'none';
+
+	//append canvas
+	//may have to use display instead(initially set to 'none') then block i.e.
+    // document.getElementById('myCanvas').style.display = 'block';
+	appendElement('ourProductsSlideShow',
+	[
+				'canvas', 'myCanvas',
+				' w3-card w3-section w3-light-grey',
+				[['style', 'display: block; margin: auto']]
+			]
+	);
 
     //initiate slide show
 	const slideshow = new GLSlideshow(
@@ -93,11 +145,13 @@ function addSlideShow(projectId){
 }
 
 module.exports = addSlideShow;
-},{"./glSlideShow":4}],3:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":5}],4:[function(require,module,exports){
 'use strict';
 
 let projectList = require('./projectList');
 let projectSlideShow = require('./projectSlideShow');
+let popularItems = require('./addPopularProducts');
+let subscribeButton = require('./subscribeButton');
 
 //display project menu
 function displayProjectMenu(){
@@ -114,7 +168,14 @@ function displayProjectMenu(){
 
 let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 ourProductsSlideShow.addEventListener('click', displayProjectMenu);
-},{"./projectList":6,"./projectSlideShow":7}],4:[function(require,module,exports){
+
+//display popular products
+popularItems();
+
+//
+subscribeButton();
+
+},{"./addPopularProducts":2,"./projectList":8,"./projectSlideShow":9,"./subscribeButton":10}],5:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -639,7 +700,65 @@ ourProductsSlideShow.addEventListener('click', displayProjectMenu);
 	return GLSlideshow;
 
 }));
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
+'use strict';
+
+//for all tags, title = alt
+let popularProducts = [
+    {
+        src: './pics/aluminumPipefittings.jpg',
+        alt: 'alluminium pipes & fittings',
+        label: 'manufactured, supplied & installed, for portable sprinkler irrigation.',
+    },
+    {
+        src: './pics/brassGateValve.jpg',
+        alt: 'cast iron & brass gate valves',
+        label: 'imported & distributed in all sizes.',
+    },
+    {
+        src: './pics/hydromaticValves.jpg',
+        alt: 'hydromatic valves',
+        label: 'manufactured according to user specification.'
+    },    
+    {
+        src: './pics/tank.jpg',
+        alt: 'tanks',
+        label: 'water tanks range from 1000 - 10 000l. Tank stands also available, for installation.',
+    }, 
+    {
+        src: './pics/horsePipe.jpg',
+        alt: 'horses',
+        label: 'irrigation pipes sizes range from 0.5 - 3 inches.',
+    },   
+    // {
+    //     src: './pics/solarPanels.jpg',
+    //     alt: 'solar panels',
+    //     label: 'supplied & installed for irrigation & water supply.',
+    // },   
+    // {
+    //     src: './pics/pumpSet.jpg',
+    //     alt: 'portable & fixed base pump sets',
+    //     label: 'all sizes assembled & supplied, includes pontoon pump sets.',
+    // },  
+    // {
+    // src: './pics/sprinklers.jpg',
+    // alt: 'brass & plastic sprinklers',
+    // label: 'all sizes imported & supplied.',
+    // },  
+    // {
+    // src: './pics/heavyDutyPrimingPump.jpg',
+    // alt: 'heavy duty priming pumps',
+    // label: 'manufactured & supplied.',
+    // },  
+    // {
+    // src: './pics/sluiceGate.jpg',
+    // alt: 'sluice gates',
+    // label: 'all sizes manufactured & installed',
+    // },
+]
+
+module.exports = popularProducts;
+},{}],7:[function(require,module,exports){
 'use strict';
 
 let projectId = [
@@ -651,7 +770,7 @@ let projectId = [
 ]
 
 module.exports = projectId;
-},{}],6:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
@@ -672,7 +791,7 @@ function createProjectList(){
         appendElement('ourProductsSlideShow', 
                 [
                                 'button', projectId[projectList.indexOf(project)], 
-                                ' w3-btn w3-section w3-bg-black-ter w3-text-light-grey', 
+                                ' w3-project w3-btn w3-section w3-bg-black-ter w3-hover-black w3-text-light-grey', 
                                 [ ['style', 'display: block'], ['style', 'margin: auto'] ] 
                             ]
                     )
@@ -682,7 +801,7 @@ function createProjectList(){
 }
 
 module.exports = createProjectList;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":5}],7:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":7}],9:[function(require,module,exports){
 'use strict';
 
 let addSlideShow = require('./addSlideShow');
@@ -696,4 +815,17 @@ function createSlideShow(){
 }
 
 module.exports = createSlideShow;
-},{"./addSlideShow":2,"./projectId":5}]},{},[3]);
+},{"./addSlideShow":3,"./projectId":7}],10:[function(require,module,exports){
+'use strict';
+
+let subscribeButton = document.getElementById('subscribeButton');
+
+//temporary message
+function alertNoSubscribe(){
+    subscribeButton.addEventListener('click', function(){
+        alert(`Greetings, dearest Customer ! \nOur Subscription tech is currently under construction. \nPlease, try again later.`)
+    });
+}
+
+module.exports = alertNoSubscribe;
+},{}]},{},[4]);

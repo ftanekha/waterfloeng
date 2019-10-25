@@ -18,7 +18,7 @@ function createProjectList(){
         appendElement('ourProductsSlideShow', 
                 [
                                 'button', projectId[projectList.indexOf(project)], 
-                                ' w3-btn w3-section w3-bg-black-ter w3-text-light-grey', 
+                                ' w3-project w3-btn w3-section w3-bg-black-ter w3-hover-black w3-text-light-grey', 
                                 [ ['style', 'display: block'], ['style', 'margin: auto'] ] 
                             ]
                     )

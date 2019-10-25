@@ -2,6 +2,8 @@
 
 let projectList = require('./projectList');
 let projectSlideShow = require('./projectSlideShow');
+let popularItems = require('./addPopularProducts');
+let subscribeButton = require('./subscribeButton');
 
 //display project menu
 function displayProjectMenu(){
@@ -18,3 +20,9 @@ function displayProjectMenu(){
 
 let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 ourProductsSlideShow.addEventListener('click', displayProjectMenu);
+
+//display popular products
+popularItems();
+
+//
+subscribeButton();

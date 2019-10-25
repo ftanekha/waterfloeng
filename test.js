@@ -1,20 +1,24 @@
+// 'use strict';
+
+// let arr = ['./pics/tank.jpg', './pics/valve.jpg', './pics/pipe.jpg'];
+
+// let counter = 0;
+
+// setInterval(() => {
+//     let image = document.getElementById('image');
+//     image.src = arr[counter];
+//     counter++;
+//     if(counter == 3) counter = 0;
+// }, 1000);
+
+// //team photo
+
 'use strict';
 
-let projectList = require('./projectList');
-let projectSlideShow = require('./projectSlideShow');
+let popularProducts = require('./popularProducts');
+// let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 
-//display project menu
-function displayProjectMenu(){
-    //hide heading
-    document.getElementById('ourProjectsHeading').style.display = 'none';
 
-    // display menu
-    projectList();
-
-    //render slideShow onlick for each project
-    projectSlideShow();
-	
-} 
-
-let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
-ourProductsSlideShow.addEventListener('click', displayProjectMenu);
+    for(let product of popularProducts){
+        console.log(product.src)
+    }

@@ -2,13 +2,30 @@
 
 let GLSlideshow = require('./glSlideShow');
 
+let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+
 //requires an array of photos as an argument
 function addSlideShow(projectId){
-    //switch from menu list
-    document.getElementById('ourProjectsHeading').style.display = 'none';
 
-    //display canvas(initially set to 'none')
-    document.getElementById('myCanvas').style.display = 'block';
+	//removeProject click eventListener - stop generation of more slideshows ???
+	document.getElementsByClassName( 'w3-project' ).removeEventListener('click', addSlideShow); 
+
+    //switch from menu list? may not be necessary
+	document.getElementById('ourProjectsHeading').style.display = 'none';
+	
+	//switch off menu items
+	document.getElementsByClassName('w3-project').style.display = 'none';
+
+	//append canvas
+	//may have to use display instead(initially set to 'none') then block i.e.
+    // document.getElementById('myCanvas').style.display = 'block';
+	appendElement('ourProductsSlideShow',
+	[
+				'canvas', 'myCanvas',
+				' w3-card w3-section w3-light-grey',
+				[['style', 'display: block; margin: auto']]
+			]
+	);
 
     //initiate slide show
 	const slideshow = new GLSlideshow(
