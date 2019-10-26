@@ -54,6 +54,13 @@ h3{
     color: black !important;
     background-color: lightgrey !important;
 }
+
+img.w3-team-photo{
+    width: 70%; 
+    height: 55%;
+    margin-left: 15%;
+}
+
 /* logo */
 img#waterfloLogo{
     float: none;

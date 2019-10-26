@@ -16,7 +16,7 @@ function addPopularProducts(){
         listItemImage.src = product.src; 
         listItemImage.alt = product.alt;
         listItemImage.title = product.alt; 
-        listItemImage.className += ' w3-left w3-margin-right w3-margin-bottom';
+        listItemImage.className += ' w3-card w3-left w3-margin-right w3-margin-bottom';
 
         let listItemLabel = document.createElement('span');
         listItemLabel.className += 'w3-justify';

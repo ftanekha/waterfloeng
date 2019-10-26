@@ -5,7 +5,12 @@ let listA = [
     {
         src: './pics/aluminumPipefittings.jpg',
         alt: 'alluminium pipes & fittings',
-        label: 'manufactured, supplied & installed, for portable sprinkler irrigation.',
+        label: 'manufactured, supplied, installed: for portable sprinklers.',
+    },
+    {
+        src: './pics/horsePipe.jpg',
+        alt: 'horses',
+        label: 'irrigation pipes sizes range from 0.5 - 3 inches.',
     },
     {
         src: './pics/brassGateValve.jpg',
@@ -21,12 +26,7 @@ let listA = [
         src: './pics/tank.jpg',
         alt: 'tanks',
         label: 'water tanks range from 1000 - 10 000l. Tank stands also available, for installation.',
-    }, 
-    {
-        src: './pics/horsePipe.jpg',
-        alt: 'horses',
-        label: 'irrigation pipes sizes range from 0.5 - 3 inches.',
-    },   
+    },    
 ]
 
 let listB = [
@@ -35,11 +35,6 @@ let listB = [
         alt: 'solar panels',
         label: 'supplied & installed for irrigation & water supply.',
     },   
-    {
-        src: './pics/pumpSet.jpg',
-        alt: 'portable & fixed base pump sets',
-        label: 'all sizes assembled & supplied, includes pontoon pump sets.',
-    },  
     {
     src: './pics/sprinklers.jpg',
     alt: 'brass & plastic sprinklers',
@@ -53,8 +48,13 @@ let listB = [
     {
     src: './pics/sluiceGate.jpg',
     alt: 'sluice gates',
-    label: 'all sizes manufactured & installed',
+    label: 'all sizes manufactured & installed.',
     },
+    {
+        src: './pics/pumpSet.jpg',
+        alt: 'portable & fixed base pump sets',
+        label: 'all sizes assembled & supplied, includes pontoon pump sets.',
+    },  
 ]
 
 let popularProducts = Math.random() > 0.5 ? listA : listB;
