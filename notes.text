@@ -6,7 +6,7 @@ projects has been clicked
 the screen moves up to the first product image.
 the image matches the clicked tag and has a highlighting background (maybe light-grey)
 - work on search thingybob
--work on subscribe section
+-work on subscribe section - email body and subject not working
 
 - work on projects section - slideshow, ref: eventListeners.js
 - hide contact section on small screens

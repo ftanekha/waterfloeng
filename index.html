@@ -160,20 +160,7 @@
                             <!-- style='clear: both' ==>above -->
                         <h4 class='w3-text-light-grey'>Tags</h4>
                     </div>
-                    <div class='w3-container-fluid w3-light-grey'>
-                        <p>
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>alluminium pipes & fittings</span> 
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>cast iron & brass gate valves</span>
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>hydromatic valves</span>  
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>tanks</span>
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>horses</span> 
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>solar panels</span> 
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>portable & fixed base pump sets</span>
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>brass & plastic sprinklers</span> 
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>heavy duty priming pumps</span> 
-                        <span class='w3-tag w3-light-grey w3-small w3-margin-bottom'>sluice gates</span> 
-                        </p>
-                    </div>
+                    <div id='tagsContainer' class='w3-container-fluid w3-light-grey'></div>
                 </div>
                 <!-- News -->
                 <div class='w3-light-grey w3-margin' style='height: 250px'>
@@ -210,8 +197,14 @@
                     </div>
                     <div class='w3-container-fluid'>
                         <p>Subscribe for regular updates on our products & services !</p>
-                        <p><input class='w3-input w3-border' type='email' placeholder='Enter e-mail' style='width:100%'></p>
-                        <p><input id='subscribeButton' type='submit' value='Subscribe' class='w3-button w3-block w3-light-grey'/></p>
+                        <p>
+                            <input id='userEmail'; class='w3-input w3-border' type='email' placeholder='Enter e-mail' style='width:100%'/>
+                        </p>
+                        <p>
+                            <a id='mailTo'>
+                                <button id='subscribeButton' class='w3-button w3-block w3-light-grey'>Subscribe</button>
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <!-- END About/Intro Menu -->

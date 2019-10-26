@@ -3,7 +3,9 @@
 let projectList = require('./projectList');
 let projectSlideShow = require('./projectSlideShow');
 let popularItems = require('./addPopularProducts');
-let subscribeButton = require('./subscribeButton');
+let tags = require('./addTags');
+// let subscribeButton = require('./subscribeButton');
+let subscribeButton = require('./subscribe');
 
 //display project menu
 function displayProjectMenu(){
@@ -23,6 +25,9 @@ ourProductsSlideShow.addEventListener('click', displayProjectMenu);
 
 //display popular products
 popularItems();
+
+//appendtags
+tags();
 
 //
 subscribeButton();

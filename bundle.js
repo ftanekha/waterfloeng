@@ -97,7 +97,7 @@ function addPopularProducts(){
 }
 
 module.exports = addPopularProducts;
-},{"./popularProducts":6}],3:[function(require,module,exports){
+},{"./popularProducts":7}],3:[function(require,module,exports){
 'use strict';
 
 let GLSlideshow = require('./glSlideShow');
@@ -145,13 +145,55 @@ function addSlideShow(projectId){
 }
 
 module.exports = addSlideShow;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":5}],4:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":6}],4:[function(require,module,exports){
+'use strict';
+
+let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+
+let tags = [
+    'alluminium pipes & fittings',  
+    'cast iron & brass gate valves', 
+    'hydromatic valves',  
+    'tanks',
+    'horses',  
+    'solar panels',  
+    'portable & fixed base pump sets', 
+    'brass & plastic sprinklers', 
+    'heavy duty priming pumps',  
+    'sluice gates', 
+]
+
+function addTags (){
+    //create a p tag to wrap around the tags
+    appendElement('tagsContainer', 
+    [
+        'p', 'tags', ' w3-text-black',
+        []
+    ])
+
+    //append the tags
+    for(let tag of tags){
+        appendElement('tags', 
+    [
+            'span', `tag_${tag}`, ' w3-tag w3-light-grey w3-small w3-margin-bottom',
+            []
+        ]);
+
+        document.getElementById(`tag_${tag}`).innerText = tag;
+    }
+}
+
+
+module.exports = addTags;
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1}],5:[function(require,module,exports){
 'use strict';
 
 let projectList = require('./projectList');
 let projectSlideShow = require('./projectSlideShow');
 let popularItems = require('./addPopularProducts');
-let subscribeButton = require('./subscribeButton');
+let tags = require('./addTags');
+// let subscribeButton = require('./subscribeButton');
+let subscribeButton = require('./subscribe');
 
 //display project menu
 function displayProjectMenu(){
@@ -172,10 +214,13 @@ ourProductsSlideShow.addEventListener('click', displayProjectMenu);
 //display popular products
 popularItems();
 
+//appendtags
+tags();
+
 //
 subscribeButton();
 
-},{"./addPopularProducts":2,"./projectList":8,"./projectSlideShow":9,"./subscribeButton":10}],5:[function(require,module,exports){
+},{"./addPopularProducts":2,"./addTags":4,"./projectList":9,"./projectSlideShow":10,"./subscribe":11}],6:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -700,7 +745,7 @@ subscribeButton();
 	return GLSlideshow;
 
 }));
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 //for all tags, title = alt
@@ -763,7 +808,7 @@ let listB = [
 let popularProducts = Math.random() > 0.5 ? listA : listB;
 
 module.exports = popularProducts;
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
 let projectId = [
@@ -775,7 +820,7 @@ let projectId = [
 ]
 
 module.exports = projectId;
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
@@ -806,7 +851,7 @@ function createProjectList(){
 }
 
 module.exports = createProjectList;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":7}],9:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":8}],10:[function(require,module,exports){
 'use strict';
 
 let addSlideShow = require('./addSlideShow');
@@ -820,17 +865,33 @@ function createSlideShow(){
 }
 
 module.exports = createSlideShow;
-},{"./addSlideShow":3,"./projectId":7}],10:[function(require,module,exports){
+},{"./addSlideShow":3,"./projectId":8}],11:[function(require,module,exports){
 'use strict';
 
-let subscribeButton = document.getElementById('subscribeButton');
+let subscribeButton = document.getElementById('mailTo'); //even though html id=mailTo
 
-//temporary message
-function alertNoSubscribe(){
+let userEmailAddress = document.getElementById('mailTo').value;
+let mailTo = 'bmadamba11@gmail.com';
+let cc = userEmailAddress; //contacts who you want to know about the email but are not required to action or respond to it
+let bcc = 'codemusltd@gmail.com'; //blind cc contacts will not be seen by other recipients (client or BusinessOwner)
+let subject = 'Customer%20Subscription.';
+//new space = %20
+//new line = %0D%0A
+let body = `This%20is%20a%20message%20to%20notify%20WaterFlo%20Engineering%20of%20the%20client's,%20${userEmailAddress},
+            %0D%subscription%20for%20occassional%20letters%20&/or%20emails
+            %20regarding%20products,%20discounts%20&%20services%20offered%20by%20Waterflo.
+            %0D%0AEffective%20as%20of%20today.`;
+
+let email = `mailto:${mailTo}?
+            cc=${cc}&bcc=${bcc}&amp;subject=${subject}&amp;body=${body}`;
+
+
+function subscribe(){
     subscribeButton.addEventListener('click', function(){
-        alert(`Greetings, dearest Customer ! \nOur Subscription tech is currently under construction. \nPlease, try again later.`)
-    });
+        subscribeButton.href = email;
+    })
 }
 
-module.exports = alertNoSubscribe;
-},{}]},{},[4]);
+module.exports = subscribe;
+
+},{}]},{},[5]);
