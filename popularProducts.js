@@ -1,7 +1,7 @@
 'use strict';
 
 //for all tags, title = alt
-let popularProducts = [
+let listA = [
     {
         src: './pics/aluminumPipefittings.jpg',
         alt: 'alluminium pipes & fittings',
@@ -27,31 +27,36 @@ let popularProducts = [
         alt: 'horses',
         label: 'irrigation pipes sizes range from 0.5 - 3 inches.',
     },   
-    // {
-    //     src: './pics/solarPanels.jpg',
-    //     alt: 'solar panels',
-    //     label: 'supplied & installed for irrigation & water supply.',
-    // },   
-    // {
-    //     src: './pics/pumpSet.jpg',
-    //     alt: 'portable & fixed base pump sets',
-    //     label: 'all sizes assembled & supplied, includes pontoon pump sets.',
-    // },  
-    // {
-    // src: './pics/sprinklers.jpg',
-    // alt: 'brass & plastic sprinklers',
-    // label: 'all sizes imported & supplied.',
-    // },  
-    // {
-    // src: './pics/heavyDutyPrimingPump.jpg',
-    // alt: 'heavy duty priming pumps',
-    // label: 'manufactured & supplied.',
-    // },  
-    // {
-    // src: './pics/sluiceGate.jpg',
-    // alt: 'sluice gates',
-    // label: 'all sizes manufactured & installed',
-    // },
 ]
+
+let listB = [
+    {
+        src: './pics/solarPanels.jpg',
+        alt: 'solar panels',
+        label: 'supplied & installed for irrigation & water supply.',
+    },   
+    {
+        src: './pics/pumpSet.jpg',
+        alt: 'portable & fixed base pump sets',
+        label: 'all sizes assembled & supplied, includes pontoon pump sets.',
+    },  
+    {
+    src: './pics/sprinklers.jpg',
+    alt: 'brass & plastic sprinklers',
+    label: 'all sizes imported & supplied.',
+    },  
+    {
+    src: './pics/heavyDutyPrimingPump.jpg',
+    alt: 'heavy duty priming pumps',
+    label: 'manufactured & supplied.',
+    },  
+    {
+    src: './pics/sluiceGate.jpg',
+    alt: 'sluice gates',
+    label: 'all sizes manufactured & installed',
+    },
+]
+
+let popularProducts = Math.random() > 0.5 ? listA : listB;
 
 module.exports = popularProducts;
