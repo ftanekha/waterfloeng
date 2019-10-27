@@ -1,3 +1,7 @@
+
+- add moza number
+-nav bar in js
+
 -need to remove function causing additional space when projects are clicked
 - need to stop canvas from displaying onload, should only show when one of the 
 projects has been clicked

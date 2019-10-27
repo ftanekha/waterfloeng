@@ -65,6 +65,61 @@ module.exports = appendElement;
 },{}],2:[function(require,module,exports){
 'use strict';
 
+let followUsLinks = require('./followUsLinks');
+let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+
+function addfollowUsLinks(){
+    for(let link of followUsLinks){
+        appendElement('followUs',
+        [
+                'a', `icon-${link.media}`, 
+                ' w3-bar-item w3-button',
+                [
+                    ['href', link.href], ['target', '_blank'],
+                ]
+            ]
+        );
+    
+        let icon = document.createElement('i');
+        icon.className += ` fa fa-${link.media}`;
+    
+        document.getElementById(`icon-${link.media}`).append(icon);
+    }
+}
+
+module.exports = addfollowUsLinks;
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./followUsLinks":8}],3:[function(require,module,exports){
+'use strict';
+
+let navBarItems = require('./navBarItems');
+let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+
+function addNavBarItems(){
+    for(let item of navBarItems){
+        appendElement('navBar',
+        [
+                'a', item.media, 
+                ' w3-bar-item w3-button',
+                [
+                    ['href', item.href], ['target', '_blank'],
+                ]
+            ]
+        );
+    
+        let icon = document.createElement('i');
+        icon.className += ` fa fa-${item.media}`;
+    
+        document.getElementById(item.media).append(icon);
+    }
+
+    //position search button right
+    document.getElementById('search').className += ' w3-right';
+}
+
+module.exports = addNavBarItems;
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./navBarItems":10}],4:[function(require,module,exports){
+'use strict';
+
 let popularProducts = require('./popularProducts');
 // let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 
@@ -84,7 +139,7 @@ function addPopularProducts(){
         listItemImage.className += ' w3-card w3-left w3-margin-right w3-margin-bottom';
 
         let listItemLabel = document.createElement('span');
-        listItemLabel.className += 'w3-justify';
+        listItemLabel.className += 'w3-justify w3-sand';
         listItemLabel.innerText = product.label;
 
         listItemImageContainer.append(listItemImage);
@@ -97,7 +152,7 @@ function addPopularProducts(){
 }
 
 module.exports = addPopularProducts;
-},{"./popularProducts":7}],3:[function(require,module,exports){
+},{"./popularProducts":11}],5:[function(require,module,exports){
 'use strict';
 
 let GLSlideshow = require('./glSlideShow');
@@ -107,8 +162,8 @@ let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 //requires an array of photos as an argument
 function addSlideShow(projectId){
 
-	//removeProject click eventListener - stop generation of more slideshows ???
-	document.getElementsByClassName( 'w3-project' ).removeEventListener('click', addSlideShow); 
+	//removeProject click eventListener - stop generation of more slideshows ???****
+	// document.getElementsByClassName( 'w3-project' ).removeEventListener('click', addSlideShow); 
 
     //switch from menu list? may not be necessary
 	document.getElementById('ourProjectsHeading').style.display = 'none';
@@ -145,7 +200,7 @@ function addSlideShow(projectId){
 }
 
 module.exports = addSlideShow;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":6}],4:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":9}],6:[function(require,module,exports){
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
@@ -185,14 +240,15 @@ function addTags (){
 
 
 module.exports = addTags;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1}],5:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1}],7:[function(require,module,exports){
 'use strict';
 
+let navBarItems = require('./addNavBarItems');
 let projectList = require('./projectList');
 let projectSlideShow = require('./projectSlideShow');
 let popularItems = require('./addPopularProducts');
 let tags = require('./addTags');
-// let subscribeButton = require('./subscribeButton');
+let followUsLinks = require('./addFollowUsLinks');
 let subscribeButton = require('./subscribe');
 
 //display project menu
@@ -208,6 +264,9 @@ function displayProjectMenu(){
 	
 } 
 
+//display navBarItems
+navBarItems();
+
 let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 ourProductsSlideShow.addEventListener('click', displayProjectMenu);
 
@@ -217,10 +276,33 @@ popularItems();
 //appendtags
 tags();
 
+//append follow us links
+followUsLinks();
+
 //
 subscribeButton();
 
-},{"./addPopularProducts":2,"./addTags":4,"./projectList":9,"./projectSlideShow":10,"./subscribe":11}],6:[function(require,module,exports){
+},{"./addFollowUsLinks":2,"./addNavBarItems":3,"./addPopularProducts":4,"./addTags":6,"./projectList":13,"./projectSlideShow":14,"./subscribe":15}],8:[function(require,module,exports){
+'use strict';
+
+let followUsLinks = [
+    {
+        media:'facebook-official',
+        href: 'https://www.facebook.com/Waterfloengineering'
+    },
+    {
+        media:'twitter',
+        href: 'https://twitter.com/waterfloengine1'
+    },
+    {
+        media:'linkedin',
+        href: 'https://zw.linkedin.com/in/blazio-madamba-31a15477'
+    },
+]
+
+module.exports = followUsLinks;
+
+},{}],9:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -745,7 +827,31 @@ subscribeButton();
 	return GLSlideshow;
 
 }));
-},{}],7:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
+'use strict';
+
+let navBarItems = [
+    {
+        media:'facebook-official',
+        href: 'https://www.facebook.com/Waterfloengineering'
+    },
+    {
+        media:'twitter',
+        href: 'https://twitter.com/waterfloengine1'
+    },
+    {
+        media:'linkedin',
+        href: 'https://zw.linkedin.com/in/blazio-madamba-31a15477'
+    },
+    {
+        media:'search',
+        href: '#'
+    }
+]
+
+module.exports = navBarItems;
+
+},{}],11:[function(require,module,exports){
 'use strict';
 
 //for all tags, title = alt
@@ -808,7 +914,7 @@ let listB = [
 let popularProducts = Math.random() > 0.5 ? listA : listB;
 
 module.exports = popularProducts;
-},{}],8:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 let projectId = [
@@ -820,7 +926,7 @@ let projectId = [
 ]
 
 module.exports = projectId;
-},{}],9:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
@@ -851,7 +957,7 @@ function createProjectList(){
 }
 
 module.exports = createProjectList;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":8}],10:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":12}],14:[function(require,module,exports){
 'use strict';
 
 let addSlideShow = require('./addSlideShow');
@@ -862,10 +968,14 @@ function createSlideShow(){
     for(let project of projectId){
         document.getElementById( project ).addEventListener('click', addSlideShow(project));
     }
+
+    //remove click event liistener
+    let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
+    ourProductsSlideShow.removeEventListener('click', displayProjectMenu);
 }
 
 module.exports = createSlideShow;
-},{"./addSlideShow":3,"./projectId":8}],11:[function(require,module,exports){
+},{"./addSlideShow":5,"./projectId":12}],15:[function(require,module,exports){
 'use strict';
 
 let subscribeButton = document.getElementById('mailTo'); //even though html id=mailTo
@@ -894,4 +1004,4 @@ function subscribe(){
 
 module.exports = subscribe;
 
-},{}]},{},[5]);
+},{}]},{},[7]);

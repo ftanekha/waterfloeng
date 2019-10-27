@@ -7,8 +7,8 @@ let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 //requires an array of photos as an argument
 function addSlideShow(projectId){
 
-	//removeProject click eventListener - stop generation of more slideshows ???
-	document.getElementsByClassName( 'w3-project' ).removeEventListener('click', addSlideShow); 
+	//removeProject click eventListener - stop generation of more slideshows ???****
+	// document.getElementsByClassName( 'w3-project' ).removeEventListener('click', addSlideShow); 
 
     //switch from menu list? may not be necessary
 	document.getElementById('ourProjectsHeading').style.display = 'none';

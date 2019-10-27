@@ -1,10 +1,11 @@
 'use strict';
 
+let navBarItems = require('./addNavBarItems');
 let projectList = require('./projectList');
 let projectSlideShow = require('./projectSlideShow');
 let popularItems = require('./addPopularProducts');
 let tags = require('./addTags');
-// let subscribeButton = require('./subscribeButton');
+let followUsLinks = require('./addFollowUsLinks');
 let subscribeButton = require('./subscribe');
 
 //display project menu
@@ -20,6 +21,9 @@ function displayProjectMenu(){
 	
 } 
 
+//display navBarItems
+navBarItems();
+
 let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 ourProductsSlideShow.addEventListener('click', displayProjectMenu);
 
@@ -28,6 +32,9 @@ popularItems();
 
 //appendtags
 tags();
+
+//append follow us links
+followUsLinks();
 
 //
 subscribeButton();

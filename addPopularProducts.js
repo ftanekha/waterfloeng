@@ -19,7 +19,7 @@ function addPopularProducts(){
         listItemImage.className += ' w3-card w3-left w3-margin-right w3-margin-bottom';
 
         let listItemLabel = document.createElement('span');
-        listItemLabel.className += 'w3-justify';
+        listItemLabel.className += 'w3-justify w3-sand';
         listItemLabel.innerText = product.label;
 
         listItemImageContainer.append(listItemImage);
