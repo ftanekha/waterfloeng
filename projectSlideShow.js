@@ -9,9 +9,9 @@ function createSlideShow(){
         document.getElementById( project ).addEventListener('click', addSlideShow(project));
     }
 
-    //remove click event liistener
-    let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
-    ourProductsSlideShow.removeEventListener('click', displayProjectMenu);
+    // //remove click event listener
+    // let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
+    // ourProductsSlideShow.removeEventListener('click', displayProjectMenu);
 }
 
 module.exports = createSlideShow;

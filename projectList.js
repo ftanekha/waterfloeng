@@ -1,7 +1,8 @@
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
-
+let exitProjectMenu = require('./exitProjectMenu');
+let projectId = require('./projectId');
 let projectList = [
     'surface irrigation construction',
     'overhead sprinkler irrigation construction',
@@ -9,8 +10,6 @@ let projectList = [
     'center pivot',
     'water supply',
 ]
-
-let projectId = require('./projectId');
 
 //can be refactored to a utility method that generates mulitple similar elements
 function createProjectList(){
@@ -25,6 +24,8 @@ function createProjectList(){
         //set the innerText of each project = project
         document.getElementById(projectId[projectList.indexOf(project)]).innerText = project;
     }
+    
+    exitProjectMenu();
 }
 
 module.exports = createProjectList;

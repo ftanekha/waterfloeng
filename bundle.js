@@ -88,7 +88,7 @@ function addfollowUsLinks(){
 }
 
 module.exports = addfollowUsLinks;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./followUsLinks":8}],3:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./followUsLinks":9}],3:[function(require,module,exports){
 'use strict';
 
 let navBarItems = require('./navBarItems');
@@ -117,7 +117,7 @@ function addNavBarItems(){
 }
 
 module.exports = addNavBarItems;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./navBarItems":10}],4:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./navBarItems":11}],4:[function(require,module,exports){
 'use strict';
 
 let popularProducts = require('./popularProducts');
@@ -152,7 +152,7 @@ function addPopularProducts(){
 }
 
 module.exports = addPopularProducts;
-},{"./popularProducts":11}],5:[function(require,module,exports){
+},{"./popularProducts":12}],5:[function(require,module,exports){
 'use strict';
 
 let GLSlideshow = require('./glSlideShow');
@@ -200,7 +200,7 @@ function addSlideShow(projectId){
 }
 
 module.exports = addSlideShow;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":9}],6:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":10}],6:[function(require,module,exports){
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
@@ -267,6 +267,14 @@ function displayProjectMenu(){
 //display navBarItems
 navBarItems();
 
+//create projects heading
+let projectsHeading = document.createElement('h4');
+projectsHeading.id = 'ourProjectsHeading';
+projectsHeading.className += ' w3-card w3-center w3-light-grey w3-c-black-ter';
+projectsHeading.innerText = 'Our projects';
+document.getElementById('ourProductsSlideShow').append(projectsHeading);
+
+//
 let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 ourProductsSlideShow.addEventListener('click', displayProjectMenu);
 
@@ -282,7 +290,43 @@ followUsLinks();
 //
 subscribeButton();
 
-},{"./addFollowUsLinks":2,"./addNavBarItems":3,"./addPopularProducts":4,"./addTags":6,"./projectList":13,"./projectSlideShow":14,"./subscribe":15}],8:[function(require,module,exports){
+//export theading o exitProjectMenu
+module.exports = projectsHeading;
+},{"./addFollowUsLinks":2,"./addNavBarItems":3,"./addPopularProducts":4,"./addTags":6,"./projectList":14,"./projectSlideShow":15,"./subscribe":16}],8:[function(require,module,exports){
+'use strict';
+
+let projectId = require('./projectId');
+
+function showProjectsHeading(){
+    document.getElementById('exitMenuButton').style.display = 'none';
+    for(let project of projectId){
+        document.getElementById(project).style.display = 'none';
+    }
+
+    let projectsHeading = document.createElement('h4');
+    projectsHeading.id = 'ourProjectsHeading';
+    projectsHeading.className += ' w3-card w3-center w3-light-grey w3-c-black-ter';
+    projectsHeading.innerText = 'Our projects';
+    document.getElementById('ourProductsSlideShow').append(projectsHeading);
+}
+
+function exitProjectMenu(){
+        document.getElementById('ourProductsSlideShow').style.position = 'relative';
+        //create button for exiting the project menu
+        let exitMenuButton = document.createElement('span');
+        exitMenuButton.id = 'exitMenuButton';
+        exitMenuButton.className += 'w3-text-red w3-small w3-codespan w3-right';
+        exitMenuButton.innerText = 'x';
+        exitMenuButton.style.position = 'absolute';
+        exitMenuButton.style.top = 1 +'px';
+        exitMenuButton.style.right = 1 +'px';
+        document.getElementById('ourProductsSlideShow').append(exitMenuButton);
+
+        exitMenuButton.addEventListener('click', showProjectsHeading);
+}
+
+module.exports = exitProjectMenu;
+},{"./projectId":13}],9:[function(require,module,exports){
 'use strict';
 
 let followUsLinks = [
@@ -302,7 +346,7 @@ let followUsLinks = [
 
 module.exports = followUsLinks;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -827,7 +871,7 @@ module.exports = followUsLinks;
 	return GLSlideshow;
 
 }));
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 'use strict';
 
 let navBarItems = [
@@ -851,7 +895,7 @@ let navBarItems = [
 
 module.exports = navBarItems;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 //for all tags, title = alt
@@ -914,7 +958,7 @@ let listB = [
 let popularProducts = Math.random() > 0.5 ? listA : listB;
 
 module.exports = popularProducts;
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 let projectId = [
@@ -926,11 +970,12 @@ let projectId = [
 ]
 
 module.exports = projectId;
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 'use strict';
 
 let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
-
+let exitProjectMenu = require('./exitProjectMenu');
+let projectId = require('./projectId');
 let projectList = [
     'surface irrigation construction',
     'overhead sprinkler irrigation construction',
@@ -938,8 +983,6 @@ let projectList = [
     'center pivot',
     'water supply',
 ]
-
-let projectId = require('./projectId');
 
 //can be refactored to a utility method that generates mulitple similar elements
 function createProjectList(){
@@ -954,10 +997,12 @@ function createProjectList(){
         //set the innerText of each project = project
         document.getElementById(projectId[projectList.indexOf(project)]).innerText = project;
     }
+    
+    exitProjectMenu();
 }
 
 module.exports = createProjectList;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./projectId":12}],14:[function(require,module,exports){
+},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./exitProjectMenu":8,"./projectId":13}],15:[function(require,module,exports){
 'use strict';
 
 let addSlideShow = require('./addSlideShow');
@@ -969,13 +1014,13 @@ function createSlideShow(){
         document.getElementById( project ).addEventListener('click', addSlideShow(project));
     }
 
-    //remove click event liistener
-    let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
-    ourProductsSlideShow.removeEventListener('click', displayProjectMenu);
+    // //remove click event listener
+    // let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
+    // ourProductsSlideShow.removeEventListener('click', displayProjectMenu);
 }
 
 module.exports = createSlideShow;
-},{"./addSlideShow":5,"./projectId":12}],15:[function(require,module,exports){
+},{"./addSlideShow":5,"./projectId":13}],16:[function(require,module,exports){
 'use strict';
 
 let subscribeButton = document.getElementById('mailTo'); //even though html id=mailTo
