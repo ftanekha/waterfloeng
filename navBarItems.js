@@ -14,8 +14,8 @@ let navBarItems = [
         href: 'https://zw.linkedin.com/in/blazio-madamba-31a15477'
     },
     {
-        media:'search',
-        href: '#'
+        media:'contact',
+        href: '#contact us'
     }
 ]
 

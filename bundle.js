@@ -267,13 +267,6 @@ function displayProjectMenu(){
 //display navBarItems
 navBarItems();
 
-//create projects heading
-let projectsHeading = document.createElement('h4');
-projectsHeading.id = 'ourProjectsHeading';
-projectsHeading.className += ' w3-card w3-center w3-light-grey w3-c-black-ter';
-projectsHeading.innerText = 'Our projects';
-document.getElementById('ourProductsSlideShow').append(projectsHeading);
-
 //
 let ourProductsSlideShow = document.getElementById('ourProductsSlideShow');
 ourProductsSlideShow.addEventListener('click', displayProjectMenu);
@@ -290,23 +283,22 @@ followUsLinks();
 //
 subscribeButton();
 
-//export theading o exitProjectMenu
-module.exports = projectsHeading;
+//export heading to exitProjectMenu
+module.exports = displayProjectMenu;
 },{"./addFollowUsLinks":2,"./addNavBarItems":3,"./addPopularProducts":4,"./addTags":6,"./projectList":14,"./projectSlideShow":15,"./subscribe":16}],8:[function(require,module,exports){
 'use strict';
 
-let projectId = require('./projectId');
+let displayProjectMenu = require('./app');
 
 function showProjectsHeading(){
-    document.getElementById('exitMenuButton').style.display = 'none';
-    for(let project of projectId){
-        document.getElementById(project).style.display = 'none';
-    }
-
+    document.getElementById('projectsMenuContainer').remove();
+    document.getElementById('exitMenuButton').remove();
+    // re-append projectHeading
     let projectsHeading = document.createElement('h4');
     projectsHeading.id = 'ourProjectsHeading';
     projectsHeading.className += ' w3-card w3-center w3-light-grey w3-c-black-ter';
-    projectsHeading.innerText = 'Our projects';
+    projectsHeading.innerText = 'Our projects'.toUpperCase();
+    projectsHeading.addEventListener('click', displayProjectMenu);
     document.getElementById('ourProductsSlideShow').append(projectsHeading);
 }
 
@@ -326,7 +318,7 @@ function exitProjectMenu(){
 }
 
 module.exports = exitProjectMenu;
-},{"./projectId":13}],9:[function(require,module,exports){
+},{"./app":7}],9:[function(require,module,exports){
 'use strict';
 
 let followUsLinks = [
@@ -987,7 +979,7 @@ let projectList = [
 //can be refactored to a utility method that generates mulitple similar elements
 function createProjectList(){
     for (let project of projectList){
-        appendElement('ourProductsSlideShow', 
+        appendElement('projectsMenuContainer', 
                 [
                                 'button', projectId[projectList.indexOf(project)], 
                                 ' w3-project w3-btn w3-section w3-bg-black-ter w3-hover-black w3-text-light-grey', 

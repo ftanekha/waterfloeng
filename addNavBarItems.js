@@ -16,13 +16,13 @@ function addNavBarItems(){
         );
     
         let icon = document.createElement('i');
-        icon.className += ` fa fa-${item.media}`;
+        icon.className += item.media === 'contact' ? ` far fa-address-book` : ` fa fa-${item.media}`;
     
         document.getElementById(item.media).append(icon);
     }
 
     //position search button right
-    document.getElementById('search').className += ' w3-right';
+    document.getElementById('contact').className += ' w3-right';
 }
 
 module.exports = addNavBarItems;

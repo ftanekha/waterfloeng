@@ -14,7 +14,7 @@ let projectList = [
 //can be refactored to a utility method that generates mulitple similar elements
 function createProjectList(){
     for (let project of projectList){
-        appendElement('ourProductsSlideShow', 
+        appendElement('projectsMenuContainer', 
                 [
                                 'button', projectId[projectList.indexOf(project)], 
                                 ' w3-project w3-btn w3-section w3-bg-black-ter w3-hover-black w3-text-light-grey', 
