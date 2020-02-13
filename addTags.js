@@ -1,6 +1,6 @@
 'use strict';
 
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 let tags = [
     'alluminium pipes & fittings',  

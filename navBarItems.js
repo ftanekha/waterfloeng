@@ -13,10 +13,10 @@ let navBarItems = [
         media:'linkedin',
         href: 'https://zw.linkedin.com/in/blazio-madamba-31a15477'
     },
-    {
-        media:'contact',
-        href: '#contact us'
-    }
+    // {
+    //     media:'contact',
+    //     href: '#contact us'
+    // }
 ]
 
 module.exports = navBarItems;

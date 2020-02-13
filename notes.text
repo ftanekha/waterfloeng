@@ -35,3 +35,8 @@ Waterflo specialises in design and construction (turn key) projects.
 
 tags:
 
+///
+add new path to 'generateHtmlElement.js' 
+move up header section
+remove border around content section
+remove search icon

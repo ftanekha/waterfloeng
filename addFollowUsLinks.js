@@ -1,7 +1,7 @@
 'use strict';
 
 let followUsLinks = require('./followUsLinks');
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 function addfollowUsLinks(){
     for(let link of followUsLinks){

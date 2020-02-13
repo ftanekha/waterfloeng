@@ -1,7 +1,7 @@
 'use strict';
 
 let navBarItems = require('./navBarItems');
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 function addNavBarItems(){
     for(let item of navBarItems){
@@ -14,9 +14,10 @@ function addNavBarItems(){
                 ]
             ]
         );
-    
         let icon = document.createElement('i');
-        icon.className += item.media === 'contact' ? ` far fa-address-book` : ` fa fa-${item.media}`;
+        //*nolonger necessary
+        // icon.className += item.media === 'contact' ? ` far fa-address-book` : ` fa fa-${item.media}`;
+        icon.className += ` fa fa-${item.media}`;
     
         document.getElementById(item.media).append(icon);
     }

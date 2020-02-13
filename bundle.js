@@ -66,7 +66,7 @@ module.exports = appendElement;
 'use strict';
 
 let followUsLinks = require('./followUsLinks');
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 function addfollowUsLinks(){
     for(let link of followUsLinks){
@@ -88,11 +88,11 @@ function addfollowUsLinks(){
 }
 
 module.exports = addfollowUsLinks;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./followUsLinks":9}],3:[function(require,module,exports){
+},{"../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js":1,"./followUsLinks":9}],3:[function(require,module,exports){
 'use strict';
 
 let navBarItems = require('./navBarItems');
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 function addNavBarItems(){
     for(let item of navBarItems){
@@ -105,19 +105,20 @@ function addNavBarItems(){
                 ]
             ]
         );
-    
         let icon = document.createElement('i');
+        //*nolonger necessary
+        // icon.className += item.media === 'contact' ? ` far fa-address-book` : ` fa fa-${item.media}`;
         icon.className += ` fa fa-${item.media}`;
     
         document.getElementById(item.media).append(icon);
     }
 
     //position search button right
-    document.getElementById('search').className += ' w3-right';
+    document.getElementById('contact').className += ' w3-right';
 }
 
 module.exports = addNavBarItems;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./navBarItems":11}],4:[function(require,module,exports){
+},{"../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js":1,"./navBarItems":11}],4:[function(require,module,exports){
 'use strict';
 
 let popularProducts = require('./popularProducts');
@@ -157,7 +158,7 @@ module.exports = addPopularProducts;
 
 let GLSlideshow = require('./glSlideShow');
 
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 //requires an array of photos as an argument
 function addSlideShow(projectId){
@@ -200,10 +201,10 @@ function addSlideShow(projectId){
 }
 
 module.exports = addSlideShow;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":10}],6:[function(require,module,exports){
+},{"../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js":1,"./glSlideShow":10}],6:[function(require,module,exports){
 'use strict';
 
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 let tags = [
     'alluminium pipes & fittings',  
@@ -240,7 +241,7 @@ function addTags (){
 
 
 module.exports = addTags;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1}],7:[function(require,module,exports){
+},{"../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js":1}],7:[function(require,module,exports){
 'use strict';
 
 let navBarItems = require('./addNavBarItems');
@@ -879,10 +880,10 @@ let navBarItems = [
         media:'linkedin',
         href: 'https://zw.linkedin.com/in/blazio-madamba-31a15477'
     },
-    {
-        media:'search',
-        href: '#'
-    }
+    // {
+    //     media:'contact',
+    //     href: '#contact us'
+    // }
 ]
 
 module.exports = navBarItems;
@@ -965,7 +966,7 @@ module.exports = projectId;
 },{}],14:[function(require,module,exports){
 'use strict';
 
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 let exitProjectMenu = require('./exitProjectMenu');
 let projectId = require('./projectId');
 let projectList = [
@@ -994,7 +995,7 @@ function createProjectList(){
 }
 
 module.exports = createProjectList;
-},{"../../js/coolFunx/methods/generateHtmlElement.js":1,"./exitProjectMenu":8,"./projectId":13}],15:[function(require,module,exports){
+},{"../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js":1,"./exitProjectMenu":8,"./projectId":13}],15:[function(require,module,exports){
 'use strict';
 
 let addSlideShow = require('./addSlideShow');

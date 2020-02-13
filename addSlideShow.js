@@ -2,7 +2,7 @@
 
 let GLSlideshow = require('./glSlideShow');
 
-let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
+let appendElement = require('../../../../../2019/frontend/js/coolFunx/methods/generateHtmlElement.js');
 
 //requires an array of photos as an argument
 function addSlideShow(projectId){
