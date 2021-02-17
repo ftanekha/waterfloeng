@@ -15,7 +15,7 @@
     <script src='./scripts/addfollowUsLinks.js' defer></script>
     <script src='./scripts/addNavBarItems.js' defer></script>
     <script src='./scripts/subscribe.js' defer></script>
-    <script src='./glideShow/imageSlider.js' defer></script>
+    <script src='./slideShow/imageSlider.js' defer></script>
 </head>
 <body class='w3-light-grey'>
     <!-- Navigation bar with social media icons -->
@@ -30,6 +30,7 @@
             <img id='waterfloLogo' src='./pics/waterfloLogo.png' class='w3-margin-left' alt='waterflo logo' style='width:25px !important; height: 24px !important; display: inline-block !important; margin-top: -5px !important;'>
         </p>
     </header>
+    <div class='w3-section' style='width:100%; height: 1em'> </div>
     <div class='w3-content' style='max-width:1600px'>
         <!-- Grid -->
         <div class='w3-row w3-padding w3-light-grey'>
@@ -140,14 +141,14 @@
                         </div>
                         <!-- imageSlider -->
                         <div id='imageSlider' class='w3-section'>
-                            <img id='image' src='./pics/waterfloLogo.png'>
+                            <img id='image' class='w3-animate-zoom' src='./pics/waterfloLogo.png'>
                         </div>
                     </div>
                 </div>
             <!-- Popular items-->
                 <div class='w3-light-grey w3-margin'>
                     <div class='w3-container w3-padding w3-bg-black-ter'>
-                        <h4 class='w3-text-light-grey'>Popular Items</h4>
+                        <h4 class='w3-text-light-grey w3-center'>Popular Items</h4>
                     </div>
                     <ul id='popularItems' class='w3-ul'></ul>
                 </div>
@@ -155,7 +156,7 @@
                 <div class='w3-light-grey w3-clear w3-margin w3-section'>
                     <div class='w3-container w3-padding w3-bg-black-ter'> 
                             <!-- style='clear: both' ==>above -->
-                        <h4 class='w3-text-light-grey'>Tags</h4>
+                        <h4 class='w3-text-light-grey w3-center'>Tags</h4>
                     </div>
                     <div id='tagsContainer' class='w3-container-fluid w3-light-grey'>
 
@@ -164,7 +165,7 @@
                 <!-- News -->
                 <div class='w3-light-grey w3-margin' style='height: 250px'>
                     <div class='w3-container w3-padding w3-bg-black-ter'>
-                        <h4 class='w3-text-light-grey'>News</h4>
+                        <h4 class='w3-text-light-grey w3-center'>News</h4>
                     </div>
                     <div class='w3-container w3-light-grey'>
                         <div class='w3-container w3-display-container w3-light-grey w3-section' >
@@ -175,7 +176,7 @@
                 <!-- Follow Us-->
                 <div class='w3-light-grey w3-margin'>
                     <div class='w3-container w3-padding w3-bg-black-ter'>
-                        <h4 class='w3-text-light-grey'>Follow Us</h4>
+                        <h4 class='w3-text-light-grey w3-center'>Follow Us</h4>
                     </div>
                     <div id='followUs' class='w3-container w3-xlarge w3-padding w3-c-black-ter w3-justify w3-center'></div>
                 </div>

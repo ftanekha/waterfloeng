@@ -14,25 +14,6 @@ h3{
     border-style: double;
     background: hsl(0, 0%, 14%);
 }
-/* div#ourProductsSlideShow{
-    height: 175px;
-} */
-
-/* h4#ourProjectsHeading{
-    margin-top: 50px;
-    font-size: 50px;
-    text-transform: uppercase;
-} */
-/* div#ourProductsSlideShow{
-    outline: groove white 30px 30px;
-} */
-/* body{
-    background: rgb(161,164,147);
-    background: linear-gradient(90deg, rgba(161,164,147,1) 0%, rgba(146,174,145,1) 35%, rgba(145,164,169,1) 100%, rgba(0,255,158,1) 100%);
-} */
-/* .w3-address{
-    text-shadow: whitesmoke 0.15px 0.15px;
-}  */
 
 .w3-icon{
     text-shadow: white 0.5px 0.5px;
@@ -81,6 +62,10 @@ img{
 }
 
 /* projectImageSlider */
+h4#ourProjectsHeading{
+    font-weight: bolder;
+}
+
 div#ourProductsSlideShow{
     position: relative;
 }
@@ -97,7 +82,7 @@ div#ourProductsSlideShow span#closeSlide{
 div#projectList ul{
     list-style-type: none;
     font-variant: small-caps;
-    font-size: 2em;
+    font-size: 1.25em;
     color:  #f1f1f1;
 } 
 div#projectList ul span.projects{
@@ -120,4 +105,9 @@ div#imageSlider img#image{
     height: 300px;
     margin-bottom: 20px;
     border: solid #f1f1f1 20px;
+}
+
+/* contact */
+div#contact{
+    padding-bottom: 2.5em;
 }

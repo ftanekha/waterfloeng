@@ -24,7 +24,7 @@ for(let project of projects){
     project.addEventListener('mouseover',
         (e) => {
             e.target.style.color = 'red';
-            e.target.style.fontSize = 1.15 + 'em';
+            e.target.style.fontSize = 1.5 + 'em';
             e.target.title = 'click me to start slide show';
         }
     );
@@ -62,7 +62,7 @@ function startImageSlider (projectName){
         if (imageIndex >= projectImages.length) imageIndex = 0;
         image.src = `../pics/${projectName}/${imageIndex}.jpg`;
         imageIndex++;
-        let timer = setTimeout(displaySlides, 2000); 
+        let timer = setTimeout(displaySlides, 7000); 
 
         function stopImageSlider(){
             const closeSlide = document.getElementById('closeSlide');
