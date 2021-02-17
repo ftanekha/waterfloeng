@@ -1,10 +1,2 @@
-# Don't track content of these folders
-node_modules/
-
-# test files#
-###################
-test.html
-test.js
-
-#notes
 notes.txt
+pics

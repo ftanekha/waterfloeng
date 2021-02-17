@@ -1,7 +1,7 @@
 'use strict';
 
 //for all tags, title = alt
-let listA = [
+const listA = [
     {
         src: './pics/aluminumPipefittings.jpg',
         alt: 'alluminium pipes & fittings',
@@ -29,7 +29,7 @@ let listA = [
     },    
 ]
 
-let listB = [
+const listB = [
     {
         src: './pics/solarPanels.jpg',
         alt: 'solar panels',
@@ -57,6 +57,35 @@ let listB = [
     },  
 ]
 
-let popularProducts = Math.random() > 0.5 ? listA : listB;
+const popularProducts = Math.random() > 0.5 ? listA : listB;
+// let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 
-module.exports = popularProducts;
+function addPopularProducts(){
+    for(let product of popularProducts){
+        const listItem = document.createElement('li');
+        listItem.className += ' w3-padding-16 w3-section';
+
+        const listItemImageContainer = document.createElement('div');
+        listItemImageContainer.style.clear = 'both';
+        listItemImageContainer.className += ' w3-section';
+
+        const listItemImage = document.createElement('img');
+        listItemImage.src = product.src; 
+        listItemImage.alt = product.alt;
+        listItemImage.title = product.alt; 
+        listItemImage.className += ' w3-card w3-left w3-margin-right w3-margin-bottom';
+
+        const listItemLabel = document.createElement('span');
+        listItemLabel.className += 'w3-justify w3-sand';
+        listItemLabel.innerText = product.label;
+
+        listItemImageContainer.append(listItemImage);
+        listItemImageContainer.append(listItemLabel);
+
+        listItem.append(listItemImageContainer);
+        
+        document.getElementById('popularItems').append(listItem);
+    }
+}
+
+addPopularProducts();
