@@ -49,7 +49,7 @@ function startImageSlider (projectName){
     const projectList = document.getElementById('projectList'); 
     projectList.style.display = 'none';
     const imageSlider = document.getElementById('imageSlider');
-    imageSlider.style.display = 'block';
+    imageSlider.style.display = 'flex';
     const image = document.getElementById('image');
 
     const projectImages = [];
@@ -62,7 +62,7 @@ function startImageSlider (projectName){
         if (imageIndex >= projectImages.length) imageIndex = 0;
         image.src = `../pics/${projectName}/${imageIndex}.jpg`;
         imageIndex++;
-        let timer = setTimeout(displaySlides, 7000); 
+        let timer = setTimeout(displaySlides, 5000); 
 
         function stopImageSlider(){
             const closeSlide = document.getElementById('closeSlide');
