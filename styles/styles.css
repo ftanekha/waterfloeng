@@ -101,8 +101,8 @@ div#imageSlider{
 } 
 
 div#imageSlider img#image{
-    width: 100%;
-    height: 300px;
+    max-width: 100%;
+    max-height: 300px;
     margin-bottom: 20px;
     border: solid #f1f1f1 20px;
 }
