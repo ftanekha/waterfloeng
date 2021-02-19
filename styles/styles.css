@@ -16,7 +16,7 @@ h3{
 }
 
 .w3-icon{
-    text-shadow: white 0.5px 0.5px;
+    text-shadow: hsl(100, 100%, 100%) 0.5px 0.5px;
 }
 
 .w3-bg-black-bis{
@@ -77,9 +77,9 @@ div#ourProductsSlideShow{
 div#ourProductsSlideShow span#closeSlide{
     right: 1.5em;
     top: 1em;
-    color: #f1f1f1;
+    color: hsl(0, 0%, 95%);
     font-weight: bolder;
-    background: black;
+    background: hsl(0, 0%, 0%);
     display: none;
 }
 
@@ -87,13 +87,13 @@ div#projectList ul{
     list-style-type: none;
     font-variant: small-caps;
     font-size: 1.25em;
-    color:  #f1f1f1;
+    color:  hsl(0, 0%, 95%);
 } 
 div#projectList ul span.projects{
-    background: black;
+    background: hsl(0, 0%, 0%);
     padding-left: 5px;
     padding-right: 15px;
-    box-shadow: #f1f1f1 5px 2px;
+    box-shadow: hsl(0, 0%, 95%) 5px 2px;
 } 
 
 div#imageSlider{
@@ -104,7 +104,17 @@ div#imageSlider img#image{
     width: 320px;
     height: 220px;
     margin: auto;
-    border: solid #f1f1f1 20px;
+    border: solid hsl(0, 0%, 95%) 20px;
+}
+
+/* news */
+.news{
+    list-style-type: 'square';
+    list-style-position: outside;
+    list-style-image: url('../pics/waterflologoMicro.png');
+    font-weight:bolder;
+    font-size: .75em;
+    text-shadow: hsl(0, 0%, 0%) 0.025em 0.025em;
 }
 
 /* contact */

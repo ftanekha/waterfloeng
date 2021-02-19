@@ -9,13 +9,14 @@
     <link type='text/css' rel='stylesheet' href='./styles/styles.css' />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald'/>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open Sans'/>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
-    <script src='./scripts/addTags.js' defer></script>
-    <script src='./scripts/addPopularProducts.js' defer></script>
-    <script src='./scripts/addfollowUsLinks.js' defer></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/> 
+    <!-- <script src='./scripts/addfollowUsLinks.js' defer></script> -->
     <script src='./scripts/addNavBarItems.js' defer></script>
-    <script src='./scripts/subscribe.js' defer></script>
+    <script src='./scripts/addPopularProducts.js' defer></script>
+    <script src='./scripts/addTags.js' defer></script>   
     <script src='./slideShow/imageSlider.js' defer></script>
+    <script src='./scripts/getNews.js' defer></script>
+    <script src='./scripts/subscribe.js' defer></script>
 </head>
 <body class='w3-light-grey'>
     <!-- Navigation bar with social media icons -->
@@ -73,7 +74,7 @@
                         <h3 class='w3-c-black-ter'>Meet the team</h3>
                     </div>
                     <div class='w3-justify'>
-                        <p class='w3-section'>Waterflo employs a substantial number of skilled workers with globally recognized qualifications. 
+                        <p class='w3-section'>Our company employs a substantial number of skilled workers with globally recognized qualifications. 
                             Our staff members come from all walks of life. We work together with a simple moto in mind: 
                             <span class='w3-codespan w3-sand' style='text-shadow: coral 0.2px 0.2px'>
                                 '<i class='w3-large w3-text-green'><b>M</b></i>oving water is our passion, 
@@ -172,7 +173,8 @@
                     </div>
                     <div class='w3-container w3-light-grey'>
                         <div class='w3-container w3-display-container w3-light-grey w3-section' >
-                            <h4 class='w3-display-middle w3-justify w3-text-red'>TBA</spa>
+                            <h4 id='tba' class='w3-display-middle w3-justify w3-text-red'>TBA</h4>
+                            <ul id='news' class='w3-hide'></ul>
                         </div>
                     </div>
                 </div>
@@ -191,7 +193,8 @@
                     <div class='w3-container-fluid'>
                         <p>Subscribe for regular updates on our products & services !</p>
                         <p>
-                            <input id='userEmail'; class='w3-input w3-border' type='email' placeholder='Enter e-mail' style='width:100%'/>
+                            <input id='userEmail'; class='w3-input w3-border' type='email' 
+                                placeholder='Enter valid e-mail address' style='width:100%'/>
                         </p>
                         <p>
                             <a id='mailTo'>
@@ -219,7 +222,7 @@
         </div>
     </div>
     <!-- Footer -->
-    <footer class='w3-container w3-bg-black-ter' style='padding:32px'>
+    <footer class='w3-container w3-margin-top w3-bg-black-ter' style='padding:32px'>
         <a href='#' class='w3-button w3-padding-large w3-margin-bottom w3-bg-black-ter w3-text-grey w3-hover-dark-grey'><i class='fa fa-toggle-up w3-margin-right'></i></a>
         <p class='w3-right'>
             <span class='w3-text-dark-grey'>By</span>
