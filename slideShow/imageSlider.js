@@ -59,11 +59,12 @@ function startImageSlider (projectName){
 
     let imageIndex = 0;
     function displaySlides(){
+        //to start slide show
         if (imageIndex >= projectImages.length) imageIndex = 0;
         image.src = `../pics/${projectName}/${imageIndex}.jpg`;
         imageIndex++;
         let timer = setTimeout(displaySlides, 5000); 
-
+        //to stop slide show 
         function stopImageSlider(){
             const closeSlide = document.getElementById('closeSlide');
             closeSlide.addEventListener('click',

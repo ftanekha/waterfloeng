@@ -19,7 +19,7 @@ tagsContainer.appendChild(tags);
 tags.id = 'tags';
 tags.className += ' w3-text-black';
 
-    //append the tags
+//append the tags
 for(let tag of tagList){
     const newTag = document.createElement('span');
     newTag.id = `tag_${tag}`;

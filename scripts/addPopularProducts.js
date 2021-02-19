@@ -3,27 +3,27 @@
 //for all tags, title = alt
 const listA = [
     {
-        src: './pics/aluminumPipefittings.jpg',
+        src: './pics/popularItems/aluminumPipefittings.jpg',
         alt: 'alluminium pipes & fittings',
         label: 'manufactured, supplied, installed: for portable sprinklers.',
     },
     {
-        src: './pics/horsePipe.jpg',
+        src: './pics/popularItems/horsePipe.jpg',
         alt: 'horses',
         label: 'irrigation pipes sizes range from 0.5 - 3 inches.',
     },
     {
-        src: './pics/brassGateValve.jpg',
+        src: './pics/popularItems/brassGateValve.jpg',
         alt: 'cast iron & brass gate valves',
         label: 'imported & distributed in all sizes.',
     },
     {
-        src: './pics/hydromaticValves.jpg',
+        src: './pics/popularItems/hydromaticValves.jpg',
         alt: 'hydromatic valves',
         label: 'manufactured according to user specification.'
     },    
     {
-        src: './pics/tank.jpg',
+        src: './pics/popularItems/tank.jpg',
         alt: 'tanks',
         label: 'water tanks range from 1000 - 10 000l. Tank stands also available, for installation.',
     },    
@@ -31,34 +31,33 @@ const listA = [
 
 const listB = [
     {
-        src: './pics/solarPanels.jpg',
+        src: './pics/popularItems/solarPanels.jpg',
         alt: 'solar panels',
         label: 'supplied & installed for irrigation & water supply.',
     },   
     {
-    src: './pics/sprinklers.jpg',
+    src: './pics/popularItems/sprinklers.jpg',
     alt: 'brass & plastic sprinklers',
     label: 'all sizes imported & supplied.',
     },  
     {
-    src: './pics/heavyDutyPrimingPump.jpg',
+    src: './pics/popularItems/heavyDutyPrimingPump.jpg',
     alt: 'heavy duty priming pumps',
     label: 'manufactured & supplied.',
     },  
     {
-    src: './pics/sluiceGate.jpg',
+    src: './pics/popularItems/sluiceGate.jpg',
     alt: 'sluice gates',
     label: 'all sizes manufactured & installed.',
     },
     {
-        src: './pics/pumpSet.jpg',
+        src: './pics/popularItems/pumpSet.jpg',
         alt: 'portable & fixed base pump sets',
         label: 'all sizes assembled & supplied, includes pontoon pump sets.',
     },  
 ]
 
 const popularProducts = Math.random() > 0.5 ? listA : listB;
-// let appendElement = require('../../js/coolFunx/methods/generateHtmlElement.js');
 
 function addPopularProducts(){
     for(let product of popularProducts){

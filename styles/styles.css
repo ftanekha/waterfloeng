@@ -97,7 +97,7 @@ div#imageSlider{
 } 
 
 div#imageSlider img#image{
-    width: 250px;
+    width: 320px;
     height: 220px;
     margin: auto;
     border: solid #f1f1f1 20px;

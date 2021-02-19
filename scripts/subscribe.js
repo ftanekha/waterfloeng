@@ -13,7 +13,6 @@ const body = `This%20is%20a%20message%20to%20notify%20WaterFlo%20Engineering%20o
             %0D%subscription%20for%20occassional%20constters%20&/or%20emails
             %20regarding%20products,%20discounts%20&%20services%20offered%20by%20Waterflo.
             %0D%0AEffective%20as%20of%20today.`;
-
 const email = `mailto:${mailTo}?
             cc=${cc}&bcc=${bcc}&amp;subject=${subject}&amp;body=${body}`;
 
