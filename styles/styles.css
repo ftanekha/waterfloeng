@@ -73,7 +73,7 @@ div#ourProductsSlideShow{
 div#ourProductsSlideShow span#closeSlide{
     right: 1.5em;
     top: 1em;
-    color: red;
+    color: #f1f1f1;
     font-weight: bolder;
     background: black;
     display: none;

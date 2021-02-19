@@ -23,7 +23,6 @@ const projects = document.getElementsByClassName('projects');
 for(let project of projects){
     project.addEventListener('mouseover',
         (e) => {
-            e.target.style.color = 'red';
             e.target.style.fontSize = 1.5 + 'em';
             e.target.title = 'click me to start slide show';
         }
