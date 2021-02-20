@@ -108,13 +108,18 @@ div#imageSlider img#image{
 }
 
 /* news */
+#news{
+    border: 0px 0px;
+}
+
 .news{
-    list-style-type: 'square';
     list-style-position: outside;
-    list-style-image: url('../pics/waterflologoMicro.png');
-    font-weight:bolder;
-    font-size: .75em;
-    text-shadow: hsl(0, 0%, 0%) 0.025em 0.025em;
+    list-style-type: none;
+    font-size: 1.1em;
+}
+.news::before{
+    content: '¦>';
+    color: red;
 }
 
 /* contact */

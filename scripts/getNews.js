@@ -14,13 +14,14 @@
                     document.getElementById('tba').classList.add('w3-hide');
                     const news = document.getElementById('news');
                     news.classList.remove('w3-hide');
-
-                    const standOutText = document.createElement('kbd');
+                    //marque is deprecated, if code breaks: 'text' or 'kbd' make good aletrnatives
+                    const standOutText = document.createElement('marquee');
                     standOutText.innerText = piece;
+                    standOutText.behavior = 'horizontal';
 
                     const pieceOfNews = document.createElement('li');
                     pieceOfNews.id = `pieceOfNews_${data.indexOf(piece)}`;
-                    pieceOfNews.className = 'news w3-text-teal';
+                    pieceOfNews.className = `news ${Math.random() > .5 ? 'w3-text-white' : 'w3-text-teal'}`;
                     
                     pieceOfNews.append(standOutText);
                     news.append(pieceOfNews);
