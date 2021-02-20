@@ -10,25 +10,24 @@
             data.length = 3;
 
             for(let piece of data){
-                if(piece.title != undefined){
+                if(typeof piece === 'string' && piece !== ''){
                     document.getElementById('tba').classList.add('w3-hide');
                     const news = document.getElementById('news');
                     news.classList.remove('w3-hide');
 
                     const standOutText = document.createElement('kbd');
-                    standOutText.innerText = piece.title;
+                    standOutText.innerText = piece;
 
                     const pieceOfNews = document.createElement('li');
                     pieceOfNews.id = `pieceOfNews_${data.indexOf(piece)}`;
                     pieceOfNews.className = 'news w3-text-teal';
+                    
                     pieceOfNews.append(standOutText);
-
                     news.append(pieceOfNews);
                 }
             }
-
         }catch(err){
             console.error(`Error detected & caught: ${err.message}`);
         }
     }
-)('https://jsonplaceholder.typicode.com/posts')
+)('https://res.cloudinary.com/fatso/raw/upload/v1613845401/Waterflo/news.json')
