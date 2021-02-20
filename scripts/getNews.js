@@ -17,7 +17,7 @@
                     //marque is deprecated, if code breaks: 'text' or 'kbd' make good aletrnatives
                     const standOutText = document.createElement('marquee');
                     standOutText.innerText = piece;
-                    standOutText.behavior = 'horizontal';
+                    standOutText.behavior = Math.random() > .5 ? 'horizontal' : 'alternate';
 
                     const pieceOfNews = document.createElement('li');
                     pieceOfNews.id = `pieceOfNews_${data.indexOf(piece)}`;
