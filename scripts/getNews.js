@@ -17,11 +17,31 @@
                     //marque is deprecated, if code breaks: 'text' or 'kbd' make good aletrnatives
                     const standOutText = document.createElement('marquee');
                     standOutText.innerText = piece;
-                    standOutText.behavior = Math.random() > .5 ? 'horizontal' : 'alternate';
+                    standOutText.behavior = 'horizontal';
+                    //alternate behavior
+                    const alternateBehavior = setInterval(
+                        () => standOutText.behavior = Math.random() > .5 ? 'horizontal' : 'alternate', 1e4
+                    );
+                    setTimeout(
+                        ()=>{
+                            clearInterval(alternateBehavior);
+                            standOutText.behavior = 'horizontal';
+                        }, 2.7e6
+                    );
 
                     const pieceOfNews = document.createElement('li');
                     pieceOfNews.id = `pieceOfNews_${data.indexOf(piece)}`;
-                    pieceOfNews.className = `news ${Math.random() > .5 ? 'w3-text-white' : 'w3-text-teal'}`;
+                    pieceOfNews.className = 'news w3-text-teal';
+                    //alternate text color
+                    const alternateColor = setInterval(
+                        () => pieceOfNews.className = `news ${Math.random() > .5 ? 'w3-text-white' : 'w3-text-teal'}`, 1e4
+                    );
+                    setTimeout(
+                        ()=>{
+                            clearInterval(alternateColor);
+                            pieceOfNews.className = 'news w3-text-white';
+                        }, 2.7e6
+                    );
                     
                     pieceOfNews.append(standOutText);
                     news.append(pieceOfNews);
@@ -31,4 +51,4 @@
             console.error(`Error detected & caught: ${err.message}`);
         }
     }
-)('https://res.cloudinary.com/fatso/raw/upload/v1613845401/Waterflo/news.json')
+)('https://res.cloudinary.com/fatso/raw/upload/v1613845401/Waterflo/news.json');

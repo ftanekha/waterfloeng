@@ -2,20 +2,20 @@
 
 const projectsInfo = {
     'surface irrigation':{
-        size : 15,
+        size : 18,
         // imageFormat : ''
     },
     'overhead sprinkler irrigation':{
-        size : '',
+        size : 1,
     },
     'drip irrigation':{
-        size : 4,
+        size : 1,
     },
     'center pivot':{
-        size : '',
+        size : 0,
     },
     'water supply':{
-        size : '',
+        size : 11,
     }
 };
 
