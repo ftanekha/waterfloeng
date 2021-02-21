@@ -20,7 +20,7 @@
                     standOutText.behavior = 'horizontal';
                     //alternate behavior
                     const alternateBehavior = setInterval(
-                        () => standOutText.behavior = Math.random() > .5 ? 'horizontal' : 'alternate', 1e4
+                        () => standOutText.behavior = Math.random() > .5 ? 'horizontal' : 'alternate', 3e4
                     );
                     setTimeout(
                         ()=>{
@@ -37,7 +37,7 @@
                         () => {
                             const color = Math.random();
                             pieceOfNews.className = `news ${color < .33 ? 'w3-text-white' : color < .66 ? 'w3-text-teal' : 'w3-text-orange'}`
-                        }, 1e4
+                        }, 3e4
                     );
                     setTimeout(
                         ()=>{

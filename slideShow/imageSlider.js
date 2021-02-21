@@ -64,7 +64,7 @@ function startImageSlider (projectName){
         if (imageIndex >= projectImages.length) imageIndex = 0;
         image.src = `../pics/${projectName}/${imageIndex}.jpg`;
         imageIndex++;
-        let timer = setTimeout(displaySlides, 1000); 
+        let timer = setTimeout(displaySlides, 6000); 
         //to stop slide show 
         function stopImageSlider(){
             const closeSlide = document.getElementById('closeSlide');
