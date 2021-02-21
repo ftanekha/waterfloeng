@@ -6,16 +6,16 @@ const projectsInfo = {
         // imageFormat : ''
     },
     'overhead sprinkler irrigation':{
-        size : 1,
+        size : 7,
     },
     'drip irrigation':{
-        size : 1,
+        size : 9,
     },
     'center pivot':{
-        size : 0,
+        size : 9,
     },
     'water supply':{
-        size : 11,
+        size : 12,
     }
 };
 
@@ -62,7 +62,7 @@ function startImageSlider (projectName){
         if (imageIndex >= projectImages.length) imageIndex = 0;
         image.src = `../pics/${projectName}/${imageIndex}.jpg`;
         imageIndex++;
-        let timer = setTimeout(displaySlides, 5000); 
+        let timer = setTimeout(displaySlides, 1000); 
         //to stop slide show 
         function stopImageSlider(){
             const closeSlide = document.getElementById('closeSlide');
