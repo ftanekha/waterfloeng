@@ -104,7 +104,7 @@ div#imageSlider img#image{
     width: 320px;
     height: 220px;
     margin: auto;
-    border: solid hsl(0, 0%, 95%) 20px;
+    border: solid 	hsl(54, 77%, 75%) 20px;
 }
 
 /* news */
