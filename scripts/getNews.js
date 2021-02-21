@@ -34,7 +34,10 @@
                     pieceOfNews.className = 'news w3-text-teal';
                     //alternate text color
                     const alternateColor = setInterval(
-                        () => pieceOfNews.className = `news ${Math.random() > .5 ? 'w3-text-white' : 'w3-text-teal'}`, 1e4
+                        () => {
+                            const color = Math.random();
+                            pieceOfNews.className = `news ${color < .33 ? 'w3-text-white' : color < .66 ? 'w3-text-teal' : 'w3-text-orange'}`
+                        }, 1e4
                     );
                     setTimeout(
                         ()=>{
@@ -51,4 +54,4 @@
             console.error(`Error detected & caught: ${err.message}`);
         }
     }
-)('https://res.cloudinary.com/fatso/raw/upload/v1613845401/Waterflo/news.json');
+)('https://gist.githubusercontent.com/bmadamba11/0d182e4a3460b7b70acfd1872a70503c/raw/6491bd406b52ba4d8f82e04707eb5840e18ebb89/news.json');
