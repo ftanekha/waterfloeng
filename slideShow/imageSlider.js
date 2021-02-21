@@ -25,12 +25,14 @@ for(let project of projects){
         (e) => {
             e.target.style.fontSize = 1.5 + 'em';
             e.target.title = 'click me to start slide show';
+            e.target.classList.add('url');
         }
     );
     project.addEventListener('mouseout',
         (e) => {
             e.target.style.color = '#f1f1f1';
             e.target.style.fontSize = 1 + 'em';
+            e.target.classList.remove('url');
         }
     );
     project.addEventListener('click',

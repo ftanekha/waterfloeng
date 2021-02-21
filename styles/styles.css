@@ -66,6 +66,10 @@ img{
 }
 
 /* projectImageSlider */
+.url {
+    cursor: url(../pics/ball.png),auto;
+}
+
 h4#ourProjectsHeading{
     font-weight: bolder;
 }

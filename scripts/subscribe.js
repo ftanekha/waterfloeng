@@ -5,7 +5,7 @@ const subscribeButton = document.getElementById('mailTo'); //even though html id
 const userEmailAddress = document.getElementById('mailTo').value;
 const mailTo = 'bmadamba11@gmail.com';
 const cc = userEmailAddress; //contacts who you want to know about the email but are not required to action or respond to it
-const bcc = 'codemusltd@gmail.com'; //blind cc contacts will not be seen by other recipients (client or BusinessOwner)
+const bcc = 'farai.tanekha@gmail.com'; //blind cc contacts will not be seen by other recipients (client or BusinessOwner)
 const subject = 'Customer%20Subscription.';
 //new space = %20
 //new line = %0D%0A
@@ -19,6 +19,9 @@ const email = `mailto:${mailTo}?
 
 function subscribe(){
     subscribeButton.addEventListener('click', function(){
+        alert(
+            `type NEW SUBSCRIBER in the SUBJECT field & click SEND :)`
+        );
         subscribeButton.href = email;
     })
 }
