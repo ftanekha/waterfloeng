@@ -54,4 +54,4 @@
             console.error(`Error detected & caught: ${err.message}`);
         }
     }
-)('https://gist.githubusercontent.com/bmadamba11/0d182e4a3460b7b70acfd1872a70503c/raw/6491bd406b52ba4d8f82e04707eb5840e18ebb89/news.json');
+)('https://gist.githubusercontent.com/bmadamba11/0d182e4a3460b7b70acfd1872a70503c/raw/news.json');
