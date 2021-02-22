@@ -9,7 +9,7 @@ const projectsInfo = {
         size : 7,
     },
     'drip irrigation':{
-        size : 9,
+        size : 8,
     },
     'center pivot':{
         size : 9,
