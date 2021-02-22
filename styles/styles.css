@@ -3,7 +3,34 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body {
+    position:relative;
     font-family: 'Oswald';
+}
+/* themes */
+.theme{
+    width: 1em;
+    height: 3em;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.theme span{
+    visibility: hidden;
+}
+
+#lightGreyTheme{
+    top: 0px;
+    right: 0px;
+    background: #f1f1f1 !important;
+    box-shadow: #f0e68c  -2px 2px 4px;
+}
+
+#khakiTheme{
+    top: 3.5em;
+    right: 0px;
+    background: #f0e68c !important;
+    box-shadow: #f1f1f1  -2px 2px 4px;
 }
 
 h3{
@@ -108,7 +135,8 @@ div#imageSlider img#image{
     width: 320px;
     height: 220px;
     margin: auto;
-    border: solid 	hsl(54, 77%, 75%) 20px;
+    border: solid transparent 20px; 
+    /* border maybe redundant^^ */
 }
 
 /* news */

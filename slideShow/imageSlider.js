@@ -1,5 +1,5 @@
 'use strict';
-
+//projects list
 const projectsInfo = {
     'surface irrigation':{
         size : 18,
@@ -18,7 +18,7 @@ const projectsInfo = {
         size : 12,
     }
 };
-
+//add mouse event handlers and cursor change
 const projects = document.getElementsByClassName('projects');
 for(let project of projects){
     project.addEventListener('mouseover',
