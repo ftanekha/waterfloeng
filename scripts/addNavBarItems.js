@@ -36,7 +36,7 @@ function addNavBarItems(){
         appendElement('navBar',
         [
                 'a', item.media, 
-                ' w3-bar-item w3-button',
+                ' w3-bar-item w3-button url',
                 [
                     ['href', item.href], ['target', '_blank'],
                 ]

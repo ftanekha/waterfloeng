@@ -17,7 +17,7 @@ const tagsContainer = document.getElementById('tagsContainer');
 const tags = document.createElement('p');
 tagsContainer.appendChild(tags);
 tags.id = 'tags';
-tags.className += ' w3-text-black';
+tags.className += ' w3-text-black url';
 
 //append the tags
 for(let tag of tagList){
