@@ -62,6 +62,9 @@ function startImageSlider (projectName){
     function displaySlides(){
         //to start slide show
         if (imageIndex >= projectImages.length) imageIndex = 0;
+        //skip drip irrrigation image 4, it doesn't show
+        if (imageIndex == 4 && projectName == 'drip irrigation') imageIndex = 5;
+        //
         image.src = `../pics/${projectName}/${imageIndex}.jpg`;
         imageIndex++;
         let timer = setTimeout(displaySlides, 6000); 
